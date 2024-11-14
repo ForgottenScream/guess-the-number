@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>Guess The Number</title><!--Title of the web page.-->
+    </head>
+    <body>
+        <!--Header Section-->
+        <div id="header" class="header"><!-- Header of the website. Includes title and introduction.-->
+        <div class="title_div"><h1 id="title_text"></h1></div><!--Title Element Division-->
+        <div class="introduction_div"><h4 id="introduction_text"></h4></div><hr><!--Introduction Element Division-->
+        </div>
+        <!--Select Mode Section-->
+        <div id="select_mode_div" class="select_mode_div"><!--Range Selection Divsion-->
+            <h4 id="select_range" class="select_range"></h4><!--Text do indicate to select range.-->
+            <input type="radio" id="mode10" name="mode_type" value="10" onclick="mode10()"><!--Range 1-10-->
+            <label for="mode10">10</label><!--Range 1-10 Label-->
+            <input type="radio" id="mode100" name="mode_type" value="100" onclick="mode100()"><!--Range 1-100-->
+            <label for="mode100">100</label><!--Range 1-100 Label-->
+            <input type="radio" id="mode1000" name="mode_type" value="1000" onclick="mode1000()"><!--Range 1-1000-->
+            <label for="mode1000">1000</label><!--Range 1-1000 Label-->
+        </div><br>
+        <!--Play Button Section-->
+        <div id="play_button_div" class="play_button_div"><!--Play Button Division-->
+            <button id="play_button" class="play_button" onclick="toggle()">Play</button><!--The Play Button-->
+        </div>
+
+        <section id="flex_container" class="flex_container"><!--Game Section including the Game Display and Guess Attempt Display-->
+        <!--Game Display Section-->
+        <div id="game_display_div" class="game_display_div"><!--Game Display Divison-->
+            <br>
+            <label id="label_input" for="number_input"></label><!--Label for User Input-->
+            <br>
+            <input type="text" id="number_input" class="number_input"><!--User Input.-->
+            <button id="check_number_button" onclick="submit() && check()">Check</button><!--Check Button-->
+            <h3 id="not_a_number" class="not_a_number"></h3><!--Warning Message if the user does not input a number.-->
+            <h3 id="highlow" class="highlow"></h3><!--Text to indicate whether the guess was too high or too low.-->
+            <h4 id="number_guesses_left" class="number_guesses_left"></h4><!--Text to indicate the number of guesses left.-->
+        </div>      
+        <!--Guess Attempt Display Section-->
+        <div id="guess_attempt_list_div" class="guess_attempt_list_div"><!-- The Guess Attempt Division-->
+            <h3 id="guess_attempt_text" class="guess_attempt_text"></h3><!--The Guess Attempt title text.-->
+            <ul id="attempt_list" class="attempt_list"></ul><!--User Attempt List-->
+        </div>
+        </section>
+        <!--Replay Dialog Section-->
+        <dialog id="replay_dialog" class="replay_dialog"><!--Dialog Box used at the end of the game for the user to restart.-->
+            <h3 id="winlose" class="winlose"></h3><!--Text to indicate whether the user has won or lost.-->
+            <button id="replay_button" class="replay_button" onclick="reset()">Play again</button><!--The replay button.-->
+        </dialog>
+    </body>
+</html>

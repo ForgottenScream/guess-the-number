@@ -1,0 +1,71 @@
+/*Basic Configuration Section*/
+body {
+    background-color: rgb(190, 178, 200);
+    margin: 0;
+    border: 0%;
+    width: 100%;
+    padding: 0%;
+    z-index: 0;
+}
+/*Text Elements Configuration Section*/
+.header {text-align: center}
+/*Game Configuration Section*/
+.select_mode_div {text-align: center;}
+
+.play_button_div{
+    text-align: center;
+}
+/* Style for the Play Button */
+.play_button {
+    height: 30px;
+    width: 200px;
+    background-color: rgb(78, 192, 25);
+    border: 1px solid;
+    border-radius: 15px;
+    overflow: auto;
+}
+
+.flex_container {
+    /* display: none; */
+    margin: auto;
+    width: 740px;
+    gap: 20px;
+}
+
+.game_display_div {
+    text-align: center;
+    width: 560px;
+    height: 260px;
+    margin: auto;
+    float: left;
+    background-color: aqua;
+    border: 1px solid;
+}
+
+.not_a_number { 
+    color: red;
+}
+
+.guess_attempt_list_div {
+    text-align: center;
+    width: 160px;
+    height: 260px;
+    margin: auto;
+    float: right;
+    background-color: brown;
+    border: 1px solid;
+}
+
+.replay_dialog {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.replay_button {
+    height: 20px;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
